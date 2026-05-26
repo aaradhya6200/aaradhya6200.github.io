@@ -1,9 +1,10 @@
 .page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 750px;
+    width: 100%;
 }
 
 .profile {
@@ -15,122 +16,44 @@
     font-size: 20px;
 }
 
-@media (min-width: 10px) and (max-width: 500px) {
+.breadcrumb {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.breadcrumb a {
+    color: #5a8a87;
+}
+
+.breadcrumb a:hover {
+    color: #e05a6d;
+}
+
+.page-body {
+    width: 100%;
+}
+
+.page-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #e05a6d;
+    margin-bottom: 0.2rem;
+}
+
+.page-meta {
+    font-style: italic;
+    color: #5a8a87;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-content {
+    width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 500px) {
     .page {
-        margin: 5%;
+        padding: 0 5%;
     }
-
-    .breadcrumb {
-        position: absolute;
-        left: 0;
-        top: 0;
-        margin-top: 5%;
-        margin-left: 5%;
-        font-size: 0.9rem;
-    }
-
-    .breadcrumb a {
-        color: #4f46e5;
-        font-style: normal;
-    }
-
-    .page-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 15%;
-        width: 100%;
-    }
-
-    .page-title {
-        font-size: 1.8rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #4f46e5, #7c3aed);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .page-meta {
-        font-style: italic;
-        color: #64748b;
-        font-size: 0.9rem;
-    }
-
-    .page-content {
-        width: 100%;
-        text-align: left;
-    }
-}
-
-@media (min-width: 501px) and (max-width: 1920px) {
-    .breadcrumb {
-        position: absolute;
-        left: 0;
-        top: 0;
-        margin-top: 20px;
-        margin-left: 30px;
-        font-size: 0.9rem;
-    }
-
-    .breadcrumb a {
-        color: #4f46e5;
-        font-style: normal;
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    .breadcrumb a:hover {
-        color: #7c3aed;
-    }
-
-    .page-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 55%;
-        max-width: 780px;
-        margin-top: 4rem;
-        background: white;
-        padding: 3rem;
-        border-radius: 16px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-    }
-
-    .page-title {
-        font-size: 2.2rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #4f46e5, #7c3aed);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 0.2rem;
-    }
-
-    .page-meta {
-        font-style: italic;
-        color: #64748b;
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .page-content {
-        width: 100%;
-        text-align: left;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .page-body {
-        background: #1e293b;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-    }
-    .page-title {
-        background: linear-gradient(135deg, #818cf8, #a78bfa);
-        -webkit-background-clip: text;
-        background-clip: text;
-    }
-    .breadcrumb a { color: #818cf8; }
 }
